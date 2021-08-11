@@ -85,7 +85,7 @@ function addProcIdTags (span, request) {
 module.exports = [
   {
     name: 'tedious',
-    versions: [ '>=1.0.0' ],
+    versions: [ '9.2.3' ],
     patch (tedious, tracer, config) {
       this.wrap(tedious.Connection.prototype, 'makeRequest', createWrapMakeRequest(tracer, config))
 
